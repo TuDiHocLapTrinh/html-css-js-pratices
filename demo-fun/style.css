@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.d-container {
+  width: 400px;
+  height: 400px;
+  perspective: 600px;
+  perspective-origin: 50% 50%;
+}
+
+.face {
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: brown;
+}
+
+.back {
+  background-color: sandybrown;
+  transform: rotateY(180deg);
+}
+
+.card {
+  transition: transform 1s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
